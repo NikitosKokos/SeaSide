@@ -167,6 +167,7 @@ body {
 body {
   line-height: 1;
   font-family: "Poppins", sans-serif;
+  color: #504f4f;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -411,10 +412,6 @@ h6 {
   opacity: 1;
 }
 
-.sm-hidden {
-  display: none;
-}
-
 .burger {
   width: 3.5rem;
   height: 3.5rem;
@@ -437,6 +434,103 @@ h6 {
 
 .burger__close-icon {
   display: none;
+}
+
+.section {
+  padding-block: 8rem;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.sm-hidden {
+  display: none;
+}
+
+.title {
+  color: #504f4f;
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 2.4rem;
+  margin: 0px 0px 2rem 0px;
+}
+
+.accent-text {
+  color: #00cc90;
+}
+
+.btn {
+  display: inline-block;
+  background: #00cc90;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.showcase {
+  margin: 80px 0px 0px 0px;
+}
+
+.showcase__container {
+  gap: 4rem;
+}
+
+.showcase__tagline {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #00cc90;
+  margin: 0px 0px 1rem 0px;
+}
+
+.showcase__title {
+  font-size: 3.6rem;
+}
+
+.showcase__descr {
+  line-height: 1.3;
+  margin: 0px 0px 3rem 0px;
+}
+
+.showcase__images {
+  grid-template-columns: 2rem repeat(2, 1fr) 2rem repeat(2, 1fr) 2rem;
+}
+
+.showcase__image-box {
+  min-height: 25rem;
+  -webkit-box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.showcase__image-box img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.showcase__image-box_left {
+  grid-column: 1/4;
+  grid-row: 1/span 10;
+  z-index: 5;
+}
+
+.showcase__image-box_center {
+  grid-column: 3/6;
+  grid-row: 7/span 10;
+}
+
+.showcase__image-box_right {
+  grid-column: 5/-1;
+  grid-row: 3/span 10;
+  z-index: 5;
 }
 
 ._container {
@@ -506,5 +600,15 @@ body._lock {
 @media (any-hover: hover) {
   .header__link:hover::before {
     opacity: 1;
+  }
+
+  .btn:hover {
+    background: #00be85;
+  }
+
+  .showcase__image-box:hover img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }

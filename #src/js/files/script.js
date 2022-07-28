@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.header__nav');
     const header = document.querySelector('.header');
-   //  const nav = document.querySelector('.burger__close-icon');
 
    const toggleMenu = () => {
       nav.classList.toggle('active');

@@ -7,7 +7,31 @@
 		<div class="wrapper">
 			@@include('_header.html',{})
 			<main class="page">
-				
+				<section class="showcase section">
+					<div class='showcase__container _container d-grid'>
+						<div class="showcase__data order-2">
+							<span class="showcase__tagline">Begin the journey</span>
+							<h1 class="showcase__title title">
+								Heal your soul at the <span class="accent-text">beach!</span>
+							</h1>
+							<p class="showcase__descr">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus porro corrupti nobis.
+							</p>
+							<a href="#" class="btn">Explore</a>
+						</div>
+						<div class="showcase__images order-1 d-grid">
+							<div class="showcase__image-box showcase__image-box_left">
+								<img src="./img/showcase-image-1.jpg" alt="showcase">
+							</div>
+							<div class="showcase__image-box showcase__image-box_center">
+								<img src="./img/showcase-image-2.jpg" alt="showcase">
+							</div>
+							<div class="showcase__image-box showcase__image-box_right">
+								<img src="./img/showcase-image-3.jpg" alt="showcase">
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('_footer.html',{})
 		</div>
