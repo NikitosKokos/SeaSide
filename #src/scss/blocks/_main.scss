@@ -116,6 +116,7 @@
 .popular-destinations {
 
    &__container {
+      gap: 3rem;
    }
 
    &__data {
@@ -181,4 +182,27 @@
 }
 .secondary-grid {
    gap: $gap-lg;
+}
+
+
+.plan-trip {
+
+   &__container {
+      gap: 3rem;
+   }
+
+   &__data {
+   }
+
+   &__tagline {
+   }
+
+   &__title {
+   }
+
+   &__descr {
+   }
+
+   &__data-wrapper {
+   }
 }

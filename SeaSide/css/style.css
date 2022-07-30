@@ -538,6 +538,10 @@ h6 {
   z-index: 5;
 }
 
+.popular-destinations__container {
+  gap: 3rem;
+}
+
 .popular-destinations__data-wrapper {
   position: relative;
 }
@@ -600,6 +604,10 @@ h6 {
 
 .secondary-grid {
   gap: 4rem;
+}
+
+.plan-trip__container {
+  gap: 3rem;
 }
 
 ._container {
