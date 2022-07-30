@@ -50,13 +50,19 @@
    display: inline-block;
    background: $accent;
    color: $white;
-   padding: 1rem 2.5rem;
+   padding: 1.3rem 2.5rem;
    transition: all .3s ease-in-out;
 
    @media(any-hover: hover){
       &:hover{
          background: #00be85;
+         color: $white;
       }
+   }
+
+   &_light{
+      background: $white;
+      color: $dark;
    }
 }
 .order-1 {
@@ -204,5 +210,51 @@
    }
 
    &__data-wrapper {
+   }
+}
+
+
+.newsletter {
+   background: url('../img/newsletter-image.jpg') center / cover no-repeat;
+   position: relative;
+   z-index: 5;
+
+   &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.4);
+      z-index: -1;
+   }
+
+   &__container {
+      display: flex;
+      justify-content: center;
+   }
+
+   &__inner {
+      max-width: 78rem;
+      text-align: center;
+      color: $white;
+   }
+
+   &__title {
+      color: $white;
+   }
+
+   &__descr {
+   }
+
+   &__btn-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: $gap-md;
+   }
+
+   &__btn {
    }
 }
