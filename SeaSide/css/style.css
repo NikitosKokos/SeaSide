@@ -665,6 +665,95 @@ h6 {
   gap: 2rem;
 }
 
+.footer {
+  background: #fff;
+  padding-bottom: 4rem;
+}
+
+.footer__inner {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+
+.footer__title {
+  font-size: 1.6rem;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer__link {
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__link:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #111;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: #111;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__contact-info address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.footer__contact-info ul {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 1.5rem;
+}
+
+.footer__separator {
+  margin-block: 2.5rem;
+  opacity: 0.2;
+}
+
+.footer__copyright {
+  opacity: 0.8;
+}
+
 ._container {
   max-width: 1160px;
   margin: 0 auto;
@@ -743,6 +832,15 @@ body._lock {
   .btn:hover {
     background: #00be85;
     color: #fff;
+  }
+
+  .footer__link:hover {
+    color: #111;
+  }
+
+  .footer__link:hover:before,
+  .footer__link:hover:after {
+    width: 100%;
   }
 }
 
