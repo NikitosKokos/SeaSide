@@ -1,6 +1,6 @@
 .footer {
    background: $white;
-   padding-bottom: 4rem;
+   padding-bottom: 2.5rem;
 
    &__content {
    }
@@ -21,11 +21,26 @@
    }
 
    &__item {
+      display: flex;
    }
 
    &__link {
+      transition: all .3s ease-in-out;
+
+      @media(any-hover: hover){
+         &:hover{
+            color: $accent;
+         }
+      }
+   }
+
+   &__icon{
       position: relative;
       transition: all .3s ease-in-out;
+      i{
+         display: inline-block;
+         padding: 0px 0px .5rem 0px;
+      }
 
       &:before{
          content: '';
@@ -34,7 +49,7 @@
          left: 0;
          width: 0;
          height: 2px;
-         background: #111;
+         background: $dark;
          transition: all .3s ease-in-out;
       }
       &:after{
@@ -44,14 +59,12 @@
          right: 0;
          width: 0;
          height: 2px;
-         background: #111;
+         background: $dark;
          transition: all .3s ease-in-out;
       }
 
       @media(any-hover: hover){
          &:hover{
-            color: #111;
-
             &:before, &:after{
                width: 100%;
             }
@@ -74,11 +87,15 @@
    }
 
    &__separator {
+      border-bottom: 1px solid #000;
       margin-block: 2.5rem;
       opacity: .2;
    }
 
    &__copyright {
+      display: block;
+      text-align: center;
+      line-height: 1.3;
       opacity: .8;
    }
 }

@@ -8,7 +8,7 @@
    height: 80px;
    z-index: 999;
    border-bottom: 1px solid transparent;
-   transition: border .2s ease-in-out;
+   transition: border .2s ease-in-out, height .2s ease-in-out;
 
    &:before{
       content: '';
@@ -26,12 +26,22 @@
 
    &.scroll{
       border-color:rgba(0,0,0,.1);
+      height: 55px;
+
+      @media (min-width: 1000px){
+         height: 65px;
+      }
    }
 
    &.active{
       &:before{
          opacity: 1;
          visibility: visible;
+
+         @media (min-width: 1000px){
+            opacity: 0;
+            visibility: hidden;
+         }
       }
    }
 
@@ -51,7 +61,11 @@
 
       &.active{
          .header__nav-mobile{
-            transform: translateY(8rem);
+            transform: translateY(0);
+
+            @media (min-width: 1000px){
+               transform: initial;
+            }
          }
          .burger__open-icon{
             display: none;
@@ -71,19 +85,33 @@
    &__nav-mobile {
       background: #f8f8f8;
       position: absolute;
-      top: 0;
+      top: 100%;
       left: 0;
       width: 100%;
       padding: 1.5rem;
       transform: translateY(-100%);
       transition: all .3s ease-in-out;
       z-index: -1;
+
+      @media (min-width: 1000px){
+         background: transparent;
+         position: initial;
+         width: initial;
+         padding: initial;
+         z-index: initial;
+         transform: initial;
+         transition: initial;
+      }
    }
 
    &__list {
       display: flex;
       flex-direction: column;
       gap: $margin-sm;
+
+      @media (min-width: 1000px){
+         flex-direction: row;
+      }
    }
 
    &__item {
@@ -104,6 +132,14 @@
          border-radius: 50%;
          opacity: 0;
          transition: all .3s ease-in-out;
+
+         @media (min-width: 1000px){
+            top: initial;
+            right: initial;
+            left: 50%;
+            bottom: -1rem;
+            transform: translateX(-50%);
+         }
       }
 
       @media(any-hover: hover){
@@ -123,6 +159,9 @@
 }
 
 .lg-hidden {
+   @media (min-width: 1000px){
+      display: none;
+   }
 }
 .burger {
    width: 3.5rem;
@@ -140,5 +179,11 @@
 
    &__close-icon {
       display: none;
+   }
+
+   @media(any-hover: hover){
+      &:hover{
+         background: #00be85;
+      }
    }
 }

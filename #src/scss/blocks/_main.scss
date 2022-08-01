@@ -5,19 +5,70 @@
    display: grid;
 }
 .sm-hidden {
-   display: none;
+   display: none !important;
+
+   @media (min-width: 1000px){
+      display: block !important;
+   }
+}
+.order-1 {
+   @media (min-width: 768px){
+      order: 0;
+   }
 }
 .order-2 {
+   @media (min-width: 768px){
+      order: 1;
+   }
 }
 .image-box{
    min-height: 25rem;
    box-shadow: 2px 2px 1rem rgba(0,0,0,.1);
    overflow: hidden;
+   position: relative;
+
+   @media (min-width: 768px){
+      min-height: 35rem;
+   }
 
    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
       object-fit: cover;
       transition: all .5s ease-in-out;
+   }
+
+   &_left{
+      @media (min-width: 1000px){
+         grid-column: 1/3;
+      }
+   }
+
+   &_center{
+      @media (min-width: 1000px){
+         grid-column: 3/7;
+      }
+   }
+
+   &_right{
+      @media (min-width: 768px){
+         grid-column: span 2;
+
+         .popular-destinations__inner{
+            width: 50%;
+         }
+      }
+
+      @media (min-width: 1000px){
+         grid-column: 7/-1;
+
+         .popular-destinations__inner{
+            width: 100%;
+         }
+      }
    }
 
    @media(any-hover: hover){
@@ -65,8 +116,6 @@
       color: $dark;
    }
 }
-.order-1 {
-}
 
 .descr{
    line-height: 1.3;
@@ -78,6 +127,13 @@
 
    &__container {
       gap: $gap-lg;
+      @media (min-width: 768px){
+         grid-template-columns: repeat(2,1fr);
+         align-items: center;
+      }
+      @media (min-width: 1000px){
+         gap: 10rem;
+      }
    }
 
    &__data {
@@ -99,7 +155,13 @@
       grid-template-columns: 2rem repeat(2, 1fr) 2rem repeat(2, 1fr) 2rem;
    }
 
-   &__image-box {   
+   &__image-box {
+      @media (min-width: 768px){
+         min-height: 25rem;
+      }
+      @media (min-width: 1000px){
+         min-height: 35rem;
+      }
       &_left {
          grid-column: 1/4;
          grid-row: 1/span 10;
@@ -123,6 +185,14 @@
 
    &__container {
       gap: 3rem;
+
+      @media (min-width: 768px){
+         grid-template-columns: repeat(2,1fr);
+         align-items: center;
+      }
+      @media (min-width: 1000px){
+         gap: 10rem;
+      }
    }
 
    &__data {
@@ -162,11 +232,24 @@
       width: 100%;
       background: $white;
       padding: 1rem;
+
+      @media (min-width: 768px){
+         padding: 1.5rem;
+      }
    }
 
    &__beach-name {
-      font-size: $size-sm;
-      margin: 0px 0px $margin-sm 0px;
+      font-size: 1.4rem;
+      margin: 0px 0px .5rem 0px;
+
+      @media (min-width: 400px){
+         font-size: $size-sm;
+         margin: 0px 0px .8rem 0px;
+      }
+   }
+
+   &__beach-location{
+      line-height: 1.3;
    }
 
    &__beach-location,
@@ -175,6 +258,13 @@
       align-items: center;
       gap: .5rem;
       font-size: $size-xsm;
+
+      i{
+         font-size: 1.6rem;
+         @media (min-width: 400px){
+            font-size: $margin-md;
+         }
+      }
    }
 
    .btn{
@@ -185,9 +275,20 @@
 }
 
 .width-50 {
+   @media (min-width: 1000px){
+      width: 50%;
+   }
 }
 .secondary-grid {
    gap: $gap-lg;
+
+   @media (min-width: 768px){
+      grid-template-columns: repeat(2,1fr);
+      grid-column: 1/-1;
+   }
+   @media (min-width: 1000px){
+      grid-template-columns: 2fr repeat(6,1fr) 2fr;
+   }
 }
 
 
@@ -195,6 +296,14 @@
 
    &__container {
       gap: 3rem;
+
+      @media (min-width: 768px){
+         grid-template-columns: repeat(2,1fr);
+         align-items: center;
+      }
+      @media (min-width: 1000px){
+         gap: 10rem;
+      }
    }
 
    &__data {
@@ -253,6 +362,10 @@
       flex-direction: column;
       justify-content: center;
       gap: $gap-md;
+
+      @media (min-width: 400px){
+         flex-direction: row;
+      }
    }
 
    &__btn {
