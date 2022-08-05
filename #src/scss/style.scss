@@ -64,5 +64,16 @@ body{
 	}
 }
 
+::-webkit-scrollbar {
+	width: 20px;
+}
+::-webkit-scrollbar-track {
+	background: $white;
+}
+::-webkit-scrollbar-thumb {
+	background: $accent;
+	border-radius: 10px;
+}
+
 // media
 @import "./base/media";

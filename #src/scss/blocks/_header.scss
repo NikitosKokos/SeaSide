@@ -26,11 +26,11 @@
 
    &.scroll{
       border-color:rgba(0,0,0,.1);
-      height: 55px;
+      // height: 55px;
 
-      @media (min-width: 1000px){
-         height: 65px;
-      }
+      // @media (min-width: 1000px){
+      //    height: 65px;
+      // }
    }
 
    &.active{
