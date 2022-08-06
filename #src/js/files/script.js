@@ -51,4 +51,36 @@ document.addEventListener('DOMContentLoaded', () => {
       });
    }
 
+   // Scroll Reveal
+   const sr = ScrollReveal({
+      distance: '25px',
+      duration: 1000
+   });
+
+   sr.reveal(`.showcase__image-box_left, .popular-destinations__data, .plan-trip__data`, {
+      origin: 'left'
+   });
+
+   sr.reveal('.showcase__image-box_center', {
+      origin: 'bottom'
+   });
+
+   sr.reveal(`.showcase__image-box_right, .showcase__data, .plan-trip__data-wrapper`, {
+      origin: 'right'
+   });
+
+   sr.reveal('.popular-destinations__data-wrapper', {
+      origin: 'bottom',
+      interval: 200
+   });
+
+   sr.reveal('.newsletter__container', {
+      origin: 'top'
+   });
+
+   sr.reveal(`.footer__inner > div, .footer__separator, .footer__copyright`, {
+      origin: 'bottom',
+      interval: 200
+   });
+
 }); // end

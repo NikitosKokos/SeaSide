@@ -1,2 +1,2 @@
-// @ @include("libs/swiper.min.js", {});
+@@include("libs/scrollreveal.js", {});
 // @ @include('libs/smoothScroll.js', {})

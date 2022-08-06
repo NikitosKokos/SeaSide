@@ -1562,5 +1562,3 @@
 	return ScrollReveal;
 
 }));
-;
-// @ @include('libs/smoothScroll.js', {})
